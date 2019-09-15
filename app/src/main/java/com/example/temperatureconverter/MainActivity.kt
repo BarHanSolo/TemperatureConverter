@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         btnconvert.setOnClickListener{
             var tempFromInput = textInputEditText.text
-            if (tempFromInput!!.isNotEmpty()) {
+            if (tempFromInput!!.isNotEmpty() && tempFromInput.toString()!="-" && tempFromInput.toString()!="."){
                 var newTemp: Float
                 if (isCelciusToFahr == true) {
                     newTemp = celcToFahr(tempFromInput.toString().toFloat())
